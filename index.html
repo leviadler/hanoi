@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Towers of Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-2.1.1.js"></script>
+    <script src="towers-ui.js"></script>
+    <script src="hanoi.js"></script>
+  </head>
+  <body>
+    
+    <h1>
+      Towers of Hanoi
+    </h1>
+    
+    <div class="alert">
+      <h2>Lets Play!</h2>
+    </div>
+    
+    <div class="towers group">
+      <div class="pile group">
+      </div>
+      <div class="pile group">
+      </div>
+      <div class="pile group">
+      </div>   
+    </div>
+    
+    <script>
+    $(document).ready( function() {
+      var game = new Hanoi.Game();
+      var ui = new Hanoi.TowersUI(game, $('.towers'));
+      
+      ui.run();
+    });
+    </script>
+    
+  </body>
+</html>
